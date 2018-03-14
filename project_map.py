@@ -4,7 +4,7 @@ from color import get_color
 
 
 # create a map
-us_map = folium.Map(location=(40, -98.7), zoom_start=3,tiles='Mapbox Bright')
+us_map = folium.Map(location=(40, -98.7), zoom_start=4,tiles='Mapbox Bright')
 
 # insert markers as children
 # Feature group for World Population Data (Polygon Layer)
@@ -57,5 +57,8 @@ legend_html_population = '''
                 </div>
                 '''
 us_map.get_root().html.add_child(folium.Element(legend_html_population))
+
+# Add Layer Control
+us_map.add_child(folium.LayerControl())
 # convert it as a HTML
 us_map.save('project_map.html')
