@@ -5,9 +5,9 @@ def get_color(elev):
     :return: str
     """
     if elev < 1000:
-        return 'blue'
+        return '#00BFFF'
     elif elev >= 1000 and elev < 3000:
-        return 'orange'
+        return '#FFA500'
     else:
-        return 'red'
+        return '#A52A2A'
 
